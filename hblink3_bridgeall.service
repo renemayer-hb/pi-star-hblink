@@ -8,7 +8,7 @@
 # is located
 
 [Unit]
-Description=hblink_bridgeall
+Description=hblink3_bridgeall
 After=network-online.target
 Wants=network-online.target
 
@@ -19,6 +19,6 @@ Restart=always
 RestartSec=5
 User=pi-star
 
-SyslogIdentifier=hblink_bridgeall
+SyslogIdentifier=hblink3_bridgeall
 [Install]
 WantedBy=default.target
