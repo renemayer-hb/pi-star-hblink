@@ -8,7 +8,7 @@ git clone https://github.com/n0mjs710/hblink3.git
 cd dmr_utils3
 sudo sh ./install.sh
 cd ..
-cp hblink3_bridgeall.cfg ./hblink3_bridgeall.cfg
+cp hblink3_bridgeall.cfg ./hblink3/hblink3_bridgeall.cfg
 cd hblink3
 sudo sh ./install.sh
 cd ..

@@ -8,7 +8,7 @@ git clone https://github.com/n0mjs710/HBLink
 cd dmr_utils
 sudo sh ./install.sh
 cd ..
-cp hblink_bridgeall.cfg ./hblink_bridgeall.cfg
+cp hblink_bridgeall.cfg ./HBLink/hblink_bridgeall.cfg
 cd HBLink/
 sudo sh ./install.sh
 cd ..
