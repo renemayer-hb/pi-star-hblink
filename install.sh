@@ -6,11 +6,11 @@ sudo apt install git
 git clone https://github.com/n0mjs710/dmr_utils
 git clone https://github.com/n0mjs710/HBLink
 cd dmr_utils
-sudo ./install.sh
+sudo sh ./install.sh
 cd ..
 cp hblink_bridgeall.cfg ./hblink_bridgeall.cfg
 cd HBLink/
-sh ./install.sh
+sudo sh ./install.sh
 cd ..
 sudo cp ipv4.fw /root/ipv4.fw
 sudo pistar-firewall

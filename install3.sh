@@ -6,11 +6,11 @@ sudo apt install git
 git clone https://github.com/n0mjs710/dmr_utils3.git
 git clone https://github.com/n0mjs710/hblink3.git
 cd dmr_utils3
-sudo ./install.sh
+sudo sh ./install.sh
 cd ..
 cp hblink3_bridgeall.cfg ./hblink3_bridgeall.cfg
-cd hblink3/
-sh ./install.sh
+cd hblink3
+sudo sh ./install.sh
 cd ..
 sudo cp ipv4.fw /root/ipv4.fw
 sudo pistar-firewall
