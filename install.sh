@@ -12,7 +12,7 @@ cp hblink_bridgeall.cfg ./HBLink/hblink_bridgeall.cfg
 cd HBLink/
 sudo sh ./install.sh
 cd ..
-sudo cp ipv4.fw /root/ipv4.fw
+sudo cp ipv4-server.fw /root/ipv4.fw
 sudo pistar-firewall
 sudo cp hblink_bridgeall.service /etc/systemd/system/hblink_bridgeall.service
 sudo systemctl enable hblink_bridgeall.service
