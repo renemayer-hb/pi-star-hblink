@@ -13,9 +13,9 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi-star/hbmonitor3/monitor.py
+ExecStart=/usr/bin/python3 /home/pi-star/pi-star-hblink/hbmonitor3/monitor.py
 
-WorkingDirectory=/home/pi-star/hbmonitor3/
+WorkingDirectory=/home/pi-star/pi-star-hblink/hbmonitor3/
 Restart=always
 RestartSec=5
 User=pi-star
