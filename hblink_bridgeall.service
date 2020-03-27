@@ -13,7 +13,7 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStart=/usr/bin/python /home/pi-star/pi-star-hblink/HBLink/hb_bridge_all.py -c /home/pi-star/pi-star-hblink/HBLink/hblink_bridgeall.cfg
+ExecStart=/usr/bin/python /home/pi-star/pi-star-hblink/HBLink/hb_bridge_all.py -c /home/pi-star/pi-star-hblink/hblink_bridgeall.cfg
 WorkingDirectory=/home/pi-star/pi-star-hblink/HBLink/
 Restart=always
 RestartSec=5
