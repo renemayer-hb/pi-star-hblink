@@ -10,7 +10,7 @@ git clone https://github.com/kc1awv/hbmonitor3.git
 
 sudo sh ./dmr_utils3/install.sh
 sudo sh ./hblink3/install.sh
-sudo sh ./hbmonitor3/install.sh
+sudo pip3 install -r ./hbmonitor3/requirements.txt
 
 sudo cp ipv4.fw /root/ipv4.fw
 sudo pistar-firewall
@@ -24,3 +24,4 @@ sudo systemctl enable hbmonitor3.service
 sudo systemctl start hbmonitor3.service
 
 cp rules.py ./hbmonitor3/rules.py
+cp config.py ./hbmonitor3/config.py
