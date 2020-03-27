@@ -1,17 +1,14 @@
-# Comments can be added using the hash at the start of a line
-# This line adds incomming access to UDP/54000
-iptables -A INPUT -p udp --dport 54000 -j ACCEPT
-# This line adds outgoing access to UDP/54000
+iptables -A INPUT -p udp --dport 54000 -j ACCEPT # This line adds incomming access to UDP/54000
+iptables -A OUTPUT -p udp --dport 54000 -j ACCEPT # This line adds outgoing access to UDP/54000
 iptables -A OUTPUT -p udp --sport 54000 -j ACCEPT
-# This line adds DSCP marking to this traffic to give it voice priority on the network
-# you dont need this but its a good thing for voice packets
+iptables -t mangle -A POSTROUTING -p udp --dport 54000 -j DSCP --set-dscp 46 # This line adds DSCP marking to this traffic to give it voice priority on the network you dont need this but its a good thing for voice packets
 iptables -t mangle -A POSTROUTING -p udp --sport 54000 -j DSCP --set-dscp 46
 iptables -A INPUT -p udp --dport 54001 -j ACCEPT
 iptables -A OUTPUT -p udp --sport 54001 -j ACCEPT 
+iptables -A OUTPUT -p udp --dport 54001 -j ACCEPT 
+iptables -t mangle -A POSTROUTING -p udp --dport 54001 -j DSCP --set-dscp 46
 iptables -t mangle -A POSTROUTING -p udp --sport 54001 -j DSCP --set-dscp 46
 #hblink networklogging port
 iptables -A OUTPUT -p tcp --dport 4321 -j ACCEPT
 iptables -A INPUT -p tcp --dport 9000 -j ACCEPT
-iptables -A OUTPUT -p tcp --sport 9000 -j ACCEPT
 iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
-iptables -A OUTPUT -p tcp --sport 8080 -j ACCEPT
