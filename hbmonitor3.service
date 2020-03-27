@@ -13,8 +13,8 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
+ExecStartPre=sudo mount -o remount,rw / ; sudo mount -o remount,rw /boot
 ExecStart=/usr/bin/python3 /home/pi-star/pi-star-hblink/hbmonitor3/monitor.py
-
 WorkingDirectory=/home/pi-star/pi-star-hblink/hbmonitor3/
 Restart=always
 RestartSec=5
