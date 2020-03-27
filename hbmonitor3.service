@@ -1,0 +1,25 @@
+# This is a .service file for systemd(8)
+#
+# If you are using systemd as a system daemon manager, you may use this file
+# (with your own local modifications) as a reference.
+#
+# This file may be copied to /etc/systemd/system/ and modified with your own
+# local changes, such as the user to run the daemon as, and where the daemon
+# is located
+
+[Unit]
+Description=hbmonitor3
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi-star/hbmonitor3/monitor.py
+
+WorkingDirectory=/home/pi-star/hbmonitor3/
+Restart=always
+RestartSec=5
+User=pi-star
+
+SyslogIdentifier=hbmonitor3
+[Install]
+WantedBy=default.target
