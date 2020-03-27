@@ -6,9 +6,9 @@ iptables -A OUTPUT -p udp --sport 54000 -j ACCEPT
 # This line adds DSCP marking to this traffic to give it voice priority on the network
 # you dont need this but its a good thing for voice packets
 iptables -t mangle -A POSTROUTING -p udp --sport 54000 -j DSCP --set-dscp 46
-#iptables -A INPUT -p tcp --dport 54001 -j ACCEPT
-#iptables -A OUTPUT -p tcp --sport 54001 -j ACCEPT 
-#iptables -t mangle -A POSTROUTING -p tcp --sport 54001 -j DSCP --set-dscp 46
+iptables -A INPUT -p tcp --dport 54001 -j ACCEPT
+iptables -A OUTPUT -p tcp --sport 54001 -j ACCEPT 
+iptables -t mangle -A POSTROUTING -p tcp --sport 54001 -j DSCP --set-dscp 46
 #hblink networklogging port
 iptables -A OUTPUT -p tcp --dport 4321 -j ACCEPT
 iptables -A INPUT -p tcp --dport 9000 -j ACCEPT
