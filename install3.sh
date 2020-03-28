@@ -19,6 +19,10 @@ sudo cp hblink3_bridge.service /etc/systemd/system/hblink3_bridge.service
 sudo systemctl enable hblink3_bridge.service
 sudo systemctl start hblink3_bridge.service
 
+sudo cp hblink3_playback.service /etc/systemd/system/hblink3_playback.service
+sudo systemctl enable hblink3_playback.service
+sudo systemctl start hblink3_playback.service
+
 sudo cp hbmonitor3.service /etc/systemd/system/hbmonitor3.service
 sudo systemctl enable hbmonitor3.service
 sudo systemctl start hbmonitor3.service
