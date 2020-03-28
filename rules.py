@@ -33,7 +33,14 @@ configuration file.
 '''
 
 BRIDGES = {
-
+    'Parrot-TS1': [
+            {'SYSTEM': 'MASTER-1',    'TS': 1, 'TGID': 8000009,    'ACTIVE': True, 'TIMEOUT': 1, 'TO_TYPE': 'NONE',  'ON': [], 'OFF': [], 'RESET': []},
+            {'SYSTEM': 'parrot-1',    'TS': 1, 'TGID': 8000009, 'ACTIVE': True, 'TIMEOUT': 1, 'TO_TYPE': 'NONE',  'ON': [], 'OFF': [], 'RESET': []},
+        ],
+            'Parrot-TS2': [
+            {'SYSTEM': 'MASTER-1',    'TS': 2, 'TGID': 8000019,    'ACTIVE': True, 'TIMEOUT': 2, 'TO_TYPE': 'NONE',  'ON': [], 'OFF': [], 'RESET': []},
+            {'SYSTEM': 'parrot-1',    'TS': 2, 'TGID': 8000019, 'ACTIVE': True, 'TIMEOUT': 2, 'TO_TYPE': 'NONE',  'ON': [], 'OFF': [], 'RESET': []},
+        ]
 }
 
 if __name__ == '__main__':
