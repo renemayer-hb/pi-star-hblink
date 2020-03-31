@@ -14,7 +14,7 @@ Wants=network-online.target
 
 [Service]
 ExecStartPre=sudo mount -o remount,rw / ; sudo mount -o remount,rw /boot
-ExecStart=/usr/bin/python3 /home/pi-star/pi-star-hblink/hblink3/bridge.py -c /home/pi-star/pi-star-hblink/hblink3_bridge.cfg
+ExecStart=/usr/bin/python3 /home/pi-star/pi-star-hblink/hblink3/bridge.py -c /home/pi-star/pi-star-hblink/hblink3_bridge.cfg -r /home/pi-star/pi-star-hblink/rules_bridge.py
 WorkingDirectory=/home/pi-star/pi-star-hblink/hblink3/
 Restart=always
 RestartSec=5

@@ -1,5 +1,5 @@
 #! /bin/bash
-ExecStartPre=sudo mount -o remount,rw / ; sudo mount -o remount,rw /boot
+sudo mount -o remount,rw / ; sudo mount -o remount,rw /boot
 sudo apt update
 sudo apt upgrade
 sudo apt install git
@@ -27,5 +27,4 @@ sudo cp hbmonitor3.service /etc/systemd/system/hbmonitor3.service
 sudo systemctl enable hbmonitor3.service
 sudo systemctl start hbmonitor3.service
 
-cp rules.py ./hbmonitor3/rules.py
 cp config.py ./hbmonitor3/config.py
