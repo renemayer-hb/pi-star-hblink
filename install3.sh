@@ -1,5 +1,5 @@
 #! /bin/bash
-rpi-rw
+ExecStartPre=sudo mount -o remount,rw / ; sudo mount -o remount,rw /boot
 sudo apt update
 sudo apt upgrade
 sudo apt install git

@@ -20,6 +20,6 @@ Restart=always
 RestartSec=5
 User=pi-star
 
-SyslogIdentifier=hblink3_bridgeall
+SyslogIdentifier=hblink3_bridge
 [Install]
 WantedBy=default.target
