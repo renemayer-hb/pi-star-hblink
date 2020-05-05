@@ -19,6 +19,7 @@ WorkingDirectory=/home/pi-star/pi-star-hblink/hbmonitor3/
 Restart=always
 RestartSec=5
 User=pi-star
+Require=hblink3_bridge
 
 SyslogIdentifier=hbmonitor3
 [Install]
