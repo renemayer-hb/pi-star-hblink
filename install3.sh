@@ -4,7 +4,7 @@ sudo apt update
 sudo apt upgrade
 sudo apt install git
 
-git clone https://github.com/n0mjs710/dmr_utils3.git
+sudo pip3 install dmr_utils3
 git clone https://github.com/HBLink-org/hblink3.git
 git clone https://github.com/kc1awv/hbmonitor3.git
 
