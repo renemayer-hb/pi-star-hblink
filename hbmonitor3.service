@@ -9,7 +9,7 @@
 
 [Unit]
 Description=hbmonitor3
-After=network-online.target
+After=hblink3_bridge
 Wants=network-online.target
 
 [Service]
