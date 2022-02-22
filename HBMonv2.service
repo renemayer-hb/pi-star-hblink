@@ -1,0 +1,19 @@
+[Unit]
+Description=HBMonV2
+After=hblink3_bridge
+Wants=network-online.target
+
+[Service]
+ExecStartPre=sudo mount -o remount,rw / ; sudo mount -o remount,rw /boot
+
+
+ExecStart=/usr/bin/python3 /home/pi-star/pi-star-hblink/HBMonv2/monitor.py
+WorkingDirectory=/home/pi-star/pi-star-hblink/HBMonv2/
+Restart=always
+RestartSec=5
+User=pi-star
+Require=hblink3_bridge
+
+SyslogIdentifier=hbmonv2  
+[Install]
+WantedBy=default.target
