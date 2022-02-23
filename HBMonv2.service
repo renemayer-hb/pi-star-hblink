@@ -14,6 +14,6 @@ RestartSec=5
 User=pi-star
 Require=hblink3_bridge
 
-SyslogIdentifier=HBMonv22  
+SyslogIdentifier=HBMonV2  
 [Install]
 WantedBy=default.target
